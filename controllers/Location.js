@@ -5,6 +5,7 @@ class LocationController {
   getAll = (req, res) => {
     location
       .find()
+      .populate('items')
       .then((docs) => {
         return res.status(httpStatusCodes.StatusCodes.OK).send(docs);
       })

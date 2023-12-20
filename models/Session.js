@@ -17,7 +17,7 @@ const SessionSchema = new mongoose.Schema(
     buffs: [{ type: Number, ref: 'Buff' }],
     items: [
       {
-        id: { type: Number, ref: 'Item', required: true },
+        _id: { type: Number, ref: 'Item', required: true },
         amount: { type: Number, required: true }
       }
     ]
