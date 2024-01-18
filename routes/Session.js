@@ -5,6 +5,7 @@ const router = express.Router();
 const sessionController = new SessionController();
 
 router.get('/', sessionController.getAll);
+router.post('/filtered', sessionController.getFiltered);
 router.get('/user', sessionController.getForUser);
 router.post('/create', sessionController.create);
 
